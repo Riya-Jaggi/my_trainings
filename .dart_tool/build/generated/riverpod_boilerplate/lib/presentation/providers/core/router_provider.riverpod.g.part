@@ -6,7 +6,7 @@ String _$appRouterHash() => r'53bfb2182d9f95e05a013c29c3366523f27e8a97';
 
 /// See also [appRouter].
 @ProviderFor(appRouter)
-final appRouterProvider = AutoDisposeProvider<AppRouter>.internal(
+final appRouterProvider = AutoDisposeProvider<Raw<AppRouter>>.internal(
   appRouter,
   name: r'appRouterProvider',
   debugGetCreateSourceHash:
@@ -15,6 +15,6 @@ final appRouterProvider = AutoDisposeProvider<AppRouter>.internal(
   allTransitiveDependencies: null,
 );
 
-typedef AppRouterRef = AutoDisposeProviderRef<AppRouter>;
+typedef AppRouterRef = AutoDisposeProviderRef<Raw<AppRouter>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
